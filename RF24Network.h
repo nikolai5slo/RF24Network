@@ -813,7 +813,7 @@ public:
   uint16_t node_address; /**< Logical node address of this unit, 1 .. UINT_MAX */
   //const static int frame_size = 32; /**< How large is each frame over the air */
   uint8_t frame_size;
-  const static unsigned int max_frame_payload_size = MAX_FRAME_SIZE-sizeof(RF24NetworkHeader);
+  static const unsigned int max_frame_payload_size = MAX_FRAME_SIZE-sizeof(RF24NetworkHeader);
 
   #if defined (RF24_LINUX)
     std::queue<RF24NetworkFrame> frame_queue;
